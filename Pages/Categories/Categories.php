@@ -26,7 +26,6 @@ if (isset($_POST['safeIn'])) {
                     class="fa fa-gear  fa-fw"> </i> Manage Categories
         </button>
     </a>
-
 </div>
 
 <?php
@@ -73,8 +72,6 @@ while ($row = $array->fetch_assoc()) {
                             <label for="2" class="col-form-label">Picture</label>
                             <input type="file" name="inPic" class="form-control" id="2" required>
                         </div>
-
-
                     </div>
 
             </div>

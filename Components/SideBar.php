@@ -12,7 +12,7 @@
                         class="fa fa-dashboard fa-fw"></i> Dashboard</span></div>
         <div class="item">
             <ul class="nostyle zero">
-                <li><a href="index.php" class="sidebar-link"><i class="fa fa-circle-o fa-fw"></i> Home</a></li>
+                <li><a href="Pages/Home/Home.php" class="sidebar-link"><i class="fa fa-circle-o fa-fw"></i> Home</a></li>
                 <li><a href="inventeriess.php" class="sidebar-link"><i class="fa fa-circle-o fa-fw"></i> Inventories</a></li>
                 <li><a href="Pages/Categories/Categories.php" class="sidebar-link"><i class="fa fa-circle-o fa-fw"></i> Categories</a></li>
                 <li><a href="PC_Assemblage.php" class="sidebar-link"><i class="fa fa-circle-o fa-fw"></i> PC_Assemblage</a>
