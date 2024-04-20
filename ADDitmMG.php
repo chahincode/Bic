@@ -96,7 +96,7 @@ else{
           <div class="center">
             <button type="submit" name="saveProduct" class="btn btn-primary">Save&Add_New</button>
             <button type="reset" class="btn btn-success">Reset</button>
-            <a href="InvotoriesMG.php" class="btn btn-danger">Cancel</a>
+            <a href="Pages/Magazin/Magazin.php" class="btn btn-danger">Cancel</a>
           </div>
           
         </form>

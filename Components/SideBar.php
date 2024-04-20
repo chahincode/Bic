@@ -15,11 +15,11 @@
                 <li><a href="Pages/Home/Home.php" class="sidebar-link"><i class="fa fa-circle-o fa-fw"></i> Home</a></li>
                 <li><a href="Pages/Inventory/Inventerie.php" class="sidebar-link"><i class="fa fa-circle-o fa-fw"></i> Inventories</a></li>
                 <li><a href="Pages/Categories/Categories.php" class="sidebar-link"><i class="fa fa-circle-o fa-fw"></i> Categories</a></li>
-                <li><a href="PC_Assemblage.php" class="sidebar-link"><i class="fa fa-circle-o fa-fw"></i> PC_Assemblage</a>
-                </li>
-                <li><a href="PC_Injection.php" class="sidebar-link"><i class="fa fa-circle-o fa-fw"></i>
-                        PC_Injection</a></li>
-                <li><a href="InvotoriesMG.php" class="sidebar-link"><i class="fa fa-circle-o fa-fw"></i> Magasin_IT</a>
+<!--                <li><a href="PC_Assemblage.php" class="sidebar-link"><i class="fa fa-circle-o fa-fw"></i> PC_Assemblage</a>-->
+<!--                </li>-->
+<!--                <li><a href="PC_Injection.php" class="sidebar-link"><i class="fa fa-circle-o fa-fw"></i>-->
+<!--                        PC_Injection</a></li>-->
+                <li><a href="Pages/Magazin/Magazin.php" class="sidebar-link"><i class="fa fa-circle-o fa-fw"></i> Magasin_IT</a>
                 </li>
                 <li>
                     <a href="#" class="sidebar-link" id="todo_tasks" onclick="toggleTasks(event)">

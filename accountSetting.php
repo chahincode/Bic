@@ -45,7 +45,7 @@ if (isset($_GET['notice'])) {
        <a href="PC_Assemblage.php"><li><i class="fa fa-circle-o fa-fw"></i> PC_Assemblage</li></a>
      <!--    <a href="newsell"><li><i class="fa fa-circle-o fa-fw"></i> New Sell</li></a> -->
         <a href="PC_Injection.php"><li><i class="fa fa-circle-o fa-fw"></i> PC_Injection</li></a>
-        <a href="InvotoriesMG.php"><li><i class="fa fa-circle-o fa-fw"></i> Magasin_IT</li></a>
+        <a href="Pages/Magazin/Magazin.php"><li><i class="fa fa-circle-o fa-fw"></i> Magasin_IT</li></a>
       </ul><
     </div>
   </div>
