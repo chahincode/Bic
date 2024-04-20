@@ -1,15 +1,4 @@
-
-
-<?php
-session_start();
-
-if(!isset($_SESSION['userId']))
-{
-  header('location:login.php');
-}
- ?>
-<?php require "assets/function.php" ?>
-<?php require 'assets/db.php';?>
+<?php require "Utilities/Header.php" ?>
 <!DOCTYPE html>
 <html>
 <head>

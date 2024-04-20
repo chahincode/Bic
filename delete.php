@@ -1,6 +1,6 @@
 <?php 
 session_start();
-include 'assets/db.php';
+include 'assets/Database.php';
 if (isset($_GET['category'])) 
 {
 	if ($con->query("delete from categories where id = '$_GET[category]'")) 

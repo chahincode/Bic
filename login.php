@@ -1,4 +1,4 @@
-<?php require "assets/function.php" ?>
+<?php require "assets/DBFunctions.php" ?>
 <!DOCTYPE html>
 <html>
 <head>

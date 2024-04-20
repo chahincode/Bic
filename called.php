@@ -1,7 +1,7 @@
 <?php 
 session_start();
 include 'assets/bill.php';
-include 'assets/db.php';
+include 'assets/Database.php';
 if (isset($_REQUEST['q'])) 
 {
 	if ($_REQUEST['q'] == 'addtobill') 
