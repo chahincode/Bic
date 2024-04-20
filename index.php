@@ -14,12 +14,38 @@
 <?php include('Components/SideBar.php'); ?>
 <?php include('Components/TopBar/TopBar.php'); ?>
 
-<div class=" marginLeft content2">
-    <?php include('Pages/Categories/Categories.php'); ?>
+<div class=" marginLeft content2" id="pageContent">
+    <!--    --><?php //include('Pages/Categories/Categories.php'); ?>
 </div>
 
 </body>
 </html>
+
+<script>
+    // Function to load page content using AJAX
+    function loadPage(page) {
+        $.ajax({
+            url: page,
+            type: 'GET',
+            success: function (response) {
+                $('#pageContent').html(response);
+            },
+            error: function (xhr, status, error) {
+                console.error(xhr.responseText);
+            }
+        });
+    }
+
+    // Attach click event handlers to sidebar links
+    $(document).ready(function () {
+        $('.sidebar-link').click(function (e) {
+            e.preventDefault();
+            var page = $(this).attr('href');
+            loadPage(page);
+        });
+    });
+</script>
+
 
 <script>
     function toggleTasks(event) {

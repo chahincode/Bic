@@ -1,3 +1,5 @@
+<?php include "..\..\Utilities\Header.php" ?>
+
 <?php
 $notice = "";
 if (isset($_POST['safeIn'])) {
@@ -21,7 +23,7 @@ if (isset($_POST['safeIn'])) {
     </button>
     <a href="manageCat.php">
         <button class="btn btn-primary btn-sm pull-right" data-toggle="modal" data-target="#addIn"><i
-                class="fa fa-gear  fa-fw"> </i> Manage Categories
+                    class="fa fa-gear  fa-fw"> </i> Manage Categories
         </button>
     </a>
 
@@ -42,8 +44,8 @@ while ($row = $array->fetch_assoc()) {
                                                                                            style="color:blue;margin-right: 11px;"><?php echo $row['name'] ?></span></span>
             <hr style="margin: 7px;">
             <span style="padding: 11px"><strong style="font-size: 10pt">Quantity</strong><span
-                    class="pull-right"
-                    style="color:blue;margin-right: 11px"><?php echo $row2['count(*)']; ?></span></span>
+                        class="pull-right"
+                        style="color:blue;margin-right: 11px"><?php echo $row2['count(*)']; ?></span></span>
         </div>
     </a>
     <?php

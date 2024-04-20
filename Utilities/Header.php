@@ -7,6 +7,6 @@ if (!isset($_SESSION['userId'])) {
 }
 
 // Include other required files
-require "assets/DBFunctions.php";
-require "assets/Database.php";
+require __DIR__ . "\..\assets\DBFunctions.php";
+require __DIR__ . "\..\assets\Database.php";
 

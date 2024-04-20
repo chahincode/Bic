@@ -9,60 +9,41 @@
     <div style="background: #1A2226;font-size: 10pt;padding: 11px;color: #79978F">MAIN NAVIGATION</div>
     <div>
         <div style="background:#1E282C;color: white;padding: 13px 17px;border-left: 3px solid #3C8DBC;"><span><i
-                    class="fa fa-dashboard fa-fw"></i> Dashboard</span></div>
+                        class="fa fa-dashboard fa-fw"></i> Dashboard</span></div>
         <div class="item">
             <ul class="nostyle zero">
-                <a href="index.php">
-                    <li><i class="fa fa-circle-o fa-fw"></i> Home</li>
-                </a>
-                <a href="inventeriess.php">
-                    <li><i class="fa fa-circle-o fa-fw"></i> Inventeries</li>
-                </a>
-                <a href="PC_Assemblage.php">
-                    <li><i class="fa fa-circle-o fa-fw"></i> PC_Assemblage</li>
-                </a>
-                <!--    <a href="newsell"><li><i class="fa fa-circle-o fa-fw"></i> New Sell</li></a> -->
-                <a href="PC_Injection.php">
-                    <li><i class="fa fa-circle-o fa-fw"></i> PC_Injection</li>
-                </a>
-                <a href="InvotoriesMG.php">
-                    <li><i class="fa fa-circle-o fa-fw"></i> Magasin_IT</li>
-                </a>
-
-                <a href="#" id="todo_tasks" onclick="toggleTasks(event)">
-                    <li><i class="fa fa-circle-o fa-fw"></i> ToDo Tasks</li>
-                </a>
-                <ul id="sub_tasks" style="display: none;">
-                    <li><a href="todo_taskspc.php">Cyberwatch</a></li>
-                    <li><a href="todo_tasks.php">Other</a></li>
-                </ul>
-
-
-                <a href="add_tasks.php">
-                    <li><i class="fa fa-circle-o fa-fw"></i> ADD Tasks</li>
-                </a>
-
+                <li><a href="index.php" class="sidebar-link"><i class="fa fa-circle-o fa-fw"></i> Home</a></li>
+                <li><a href="inventeriess.php" class="sidebar-link"><i class="fa fa-circle-o fa-fw"></i> Inventories</a></li>
+                <li><a href="Pages/Categories/Categories.php" class="sidebar-link"><i class="fa fa-circle-o fa-fw"></i> Categories</a></li>
+                <li><a href="PC_Assemblage.php" class="sidebar-link"><i class="fa fa-circle-o fa-fw"></i> PC_Assemblage</a>
+                </li>
+                <li><a href="PC_Injection.php" class="sidebar-link"><i class="fa fa-circle-o fa-fw"></i>
+                        PC_Injection</a></li>
+                <li><a href="InvotoriesMG.php" class="sidebar-link"><i class="fa fa-circle-o fa-fw"></i> Magasin_IT</a>
+                </li>
+                <li>
+                    <a href="#" class="sidebar-link" id="todo_tasks" onclick="toggleTasks(event)">
+                        <i class="fa fa-circle-o fa-fw"></i> ToDo Tasks
+                    </a>
+                    <ul id="sub_tasks" style="display: none;">
+                        <li><a href="todo_taskspc.php" class="sidebar-link">Cyberwatch</a></li>
+                        <li><a href="todo_tasks.php" class="sidebar-link">Other</a></li>
+                    </ul>
+                </li>
+                <li><a href="add_tasks.php" class="sidebar-link"><i class="fa fa-circle-o fa-fw"></i> ADD Tasks</a></li>
             </ul>
-            <
         </div>
     </div>
     <div style="background:#1E282C;color: white;padding: 13px 17px;border-left: 3px solid #3C8DBC;"><span><i
-                class="fa fa-globe fa-fw"></i> Other Menu</span></div>
+                    class="fa fa-globe fa-fw"></i> Other Menu</span></div>
     <div class="item">
         <ul class="nostyle zero">
-            <a href="sitesetting.php">
-                <li><i class="fa fa-circle-o fa-fw"></i> Site Setting</li>
-            </a>
-            <a href="profile.php">
-                <li><i class="fa fa-circle-o fa-fw"></i> Profile Setting</li>
-            </a>
-            <a href="accountSetting.php">
-                <li><i class="fa fa-circle-o fa-fw"></i> Account Setting</li>
-            </a>
-            <a href="logout.php">
-                <li><i class="fa fa-circle-o fa-fw"></i> Sign Out</li>
-            </a>
+            <li><a href="sitesetting.php" class="sidebar-link"><i class="fa fa-circle-o fa-fw"></i> Site Setting</a>
+            </li>
+            <li><a href="profile.php" class="sidebar-link"><i class="fa fa-circle-o fa-fw"></i> Profile Setting</a></li>
+            <li><a href="accountSetting.php" class="sidebar-link"><i class="fa fa-circle-o fa-fw"></i> Account
+                    Setting</a></li>
+            <li><a href="logout.php" class="sidebar-link"><i class="fa fa-circle-o fa-fw"></i> Sign Out</a></li>
         </ul>
-        <
     </div>
 </div>
