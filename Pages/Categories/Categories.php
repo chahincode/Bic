@@ -13,8 +13,6 @@ if (isset($_POST['safeIn'])) {
 
 ?>
 
-
-
 <?php echo $notice; ?>
 <div>
     <span style="font-size: 16pt;color: #333333">Categories </span>

@@ -8,6 +8,8 @@
     <link rel="stylesheet" type="text/css" href="css/customStyle.css">
     <script src='js/jquery.js'></script>
     <script src='js/bootstrap.min.js'></script>
+    <script src="js/datatables.net/js/jquery.dataTables.min.js"></script>
+    <script src="js/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
 </head>
 <body style="background: #ECF0F5;padding:0;margin:0">
 <?php include('Components/SideBar.php'); ?>
