@@ -1,14 +1,20 @@
-function openForm() {
-    document.getElementById("myForm").style.display = "block";
+
+// JavaScript code
+function showPopup() {
+    var popup = document.getElementById("popupFormee");
+    var overlay = document.getElementById("overlay");
+    popup.classList.add("active");
+
 }
 
-function openFormalocate() {
-    document.getElementById("myForm").style.display = "block";
+// You can also define a function to close the popup
+function closePopup() {
+    var popup = document.getElementById("popupFormee");
+    var overlay = document.getElementById("overlay");
+    popup.classList.remove("active");
+
 }
 
-function closeForm() {
-    document.getElementById("myForm").style.display = "none";
-}
 
 function getValue(row) {
 
@@ -26,13 +32,6 @@ function getValue1(row) {
     var selectedValueStat = selectedRow.cells[5].innerText;
     return selectedValueStat;
 }
-function openFormee() {
-    document.getElementById("popupFormee").style.display = "block";
-}
-
-function closeFormee() {
-    document.getElementById("popupFormee").style.display = "none";
-};
 
 function toggleTasks(event) {
     event.preventDefault(); // Empêche le comportement par défaut du lien

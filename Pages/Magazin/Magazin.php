@@ -1,17 +1,18 @@
 <?php include "..\..\Utilities\Header.php"; ?>
+
+<link rel="stylesheet" type="text/css" href="Pages/Magazin/style.css">
+<script src="Pages/Magazin/script.js"></script>
+
 <?php
-if (isset($_GET['catId'])) {
-    $catId = $_GET['catId'];
-    $array = $con->query("select * from inventeriesmg where id='$catId'");
-    $catArray = $array->fetch_assoc();
-    $catName = $catArray['name'];
-    $stockArray = $con->query("select * from inventeriesmg where catId='$catArray[id]'");
-} else {
-    $catName = "All Inventeries";
-    $stockArray = $con->query("select * from invotoriesmg");
-}
+$catName = "All Inventeries";
+$stockArray = $con->query("select * from invotoriesmg");
+
 ?>
+
 <div class="content">
+    <a href="Pages/Magazin/ADDitmMG.php" onClick="return popup(this, 'notes')">
+        <button>Ajouter</button>
+    </a>
     <div class="tableBox">
         <table id="dataTable" class="table table-bordered table-striped" style="z-index: -1">
             <thead>
@@ -23,7 +24,6 @@ if (isset($_GET['catId'])) {
             <th>Statue_reception(JDE)</th>
             <th>commentaire</th>
             <th>Qt</th>
-            <th>picture</th>
             <th></th>
             </thead>
             <tbody>
@@ -39,42 +39,39 @@ if (isset($_GET['catId'])) {
                 <td><?php echo $row['modele']; ?></td>
                 <td><?php echo $row['SN']; ?></td>
                 <td><?php echo $row['Date_reception']; ?></td>
-                <td><?php echo $row['Statue_reception']; ?></td>
+                <td>
+                    <?php if ($row['Statue_reception'] == 0) {
+                        echo "<span class=\"badge badge-success\"></span>";
+                    } else {
+                        echo '<span class="badge badge-success">Success</span>';
+                    } ?>
+                    </td>
                 <td><?php echo $row['commentaire']; ?></td>
                 <td><?php echo $row['Qt']; ?></td>
-                <td><?php echo $row['pic']; ?></td>
+                <td>
+                    <a <?php if ($row['Statue_reception'] == 0) {
+                        echo 'href="Pages/Magazin/updateMG.php?id=' . $row['id'] . '"';
+                    } else {
+                        echo 'href="javascript:void(0)"';
+                    } ?> class="link-dark">
+                        <i class="fa-solid fa-pen-to-square fs-5 me-3"><button>Reception</button></i>
+                    </a>
 
-                <td><a href="updateMG.php?id=<?php echo $row["id"] ?>" class="link-dark"><i
+                    <a href="Pages/Magazin/alocateMG.php?id=<?php echo $row["id"] ?>" class="link-dark"><i
                                 class="fa-solid fa-pen-to-square fs-5 me-3">
-                            <button>reception</button>
+                            <button> Alocate</button>
+                        </i></a>
+                    <a href="Pages/Magazin/Details.php?id=<?php echo $row["id"] ?>" class="link-dark"><i
+                                class="fa-solid fa-pen-to-square fs-5 me-3">
+                            <button> Details</button>
                         </i></a>
 
-                    <a href="alocateMG.php?id=<?php echo $row["id"] ?>" class="link-dark"><i
-                                class="fa-solid fa-pen-to-square fs-5 me-3">
-                            <button> alocate</button>
-                        </i></a>
                 </td>
-
-                <div id="popupFormee" class="popup">
-                    <form action="/submit_form" method="post" class="form">
-                        <div class="form-group">
-                            <label for="some" class="col-form-label"> Statut de reception</label>
-                            <input type="checkbox" id="St" name="St" value="1">
-
-                        </div>
-                        <button type="submit" name="updatepr" class="btn btn-primary">update</button>
-                        <br>
-                        <button type="button" class="btn btn-primary" onclick="closeFormee()">Close</button>
-                    </form>
-                </div>
                 <?php
                 }
                 ?>
             </tbody>
         </table>
     </div>
-</div>  <!-- ending tag for content -->
+</div>
 
-<script src="Pages/Magazin/script.js"></script>
-<link rel="stylesheet" type="text/css" href="Pages/Magazin/style.css">
-  

@@ -102,7 +102,7 @@ else
         <li><a href="index.php"><i class="fa fa-dashboard"></i> Dashboard</a></li>
         <li class="active"><?php echo $catName ?></li>
         
-        <a href="ADDitmMG.php" onClick="return popup(this, 'notes')"><button>Ajouter</button></a>
+        <a href="Pages/Magazin/ADDitmMG.php" onClick="return popup(this, 'notes')"><button>Ajouter</button></a>
 <SCRIPT TYPE="text/javascript">
   function popup(mylink, windowname) {
     if (! window.focus)return true;

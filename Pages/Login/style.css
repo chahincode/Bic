@@ -1,0 +1,28 @@
+.head-title{
+    width: 25%;
+    padding:4px 11px;
+    margin: 111px auto auto;
+    text-align: center;
+}
+
+.login-container{
+    width: 25%;
+    padding: 22px;
+    margin: 22px auto auto;
+    z-index: 6
+}
+
+.alert-container{
+    width: 25%;
+    margin: auto;
+    display: none;
+}
+
+.empty-div{
+    position: fixed;
+    top:0;
+    background: rgba(0,0,0,0.7);
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
