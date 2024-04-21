@@ -38,7 +38,7 @@
                     class="fa fa-globe fa-fw"></i> Other Menu</span></div>
     <div class="item">
         <ul class="nostyle zero">
-            <li><a href="sitesetting.php" class="sidebar-link"><i class="fa fa-circle-o fa-fw"></i> Site Setting</a>
+            <li><a href="Pages/Settings/WebSite_Settings.php" class="sidebar-link"><i class="fa fa-circle-o fa-fw"></i> Site Setting</a>
             </li>
             <li><a href="profile.php" class="sidebar-link"><i class="fa fa-circle-o fa-fw"></i> Profile Setting</a></li>
             <li><a href="accountSetting.php" class="sidebar-link"><i class="fa fa-circle-o fa-fw"></i> Account
