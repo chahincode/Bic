@@ -22,15 +22,15 @@
                 <li><a href="Pages/Magazin/Magazin.php" class="sidebar-link"><i class="fa fa-circle-o fa-fw"></i> Magasin_IT</a>
                 </li>
                 <li>
-                    <a href="#" class="sidebar-link" id="todo_tasks" onclick="toggleTasks(event)">
+                    <a  id="todo_tasks" onclick="toggleTasks(event)">
                         <i class="fa fa-circle-o fa-fw"></i> ToDo Tasks
                     </a>
                     <ul id="sub_tasks" style="display: none;">
-                        <li><a href="todo_taskspc.php" class="sidebar-link">Cyberwatch</a></li>
-                        <li><a href="todo_tasks.php" class="sidebar-link">Other</a></li>
+                        <li><a href="Pages/ToDoList/ToDo_CyberWatch.php" class="sidebar-link">Cyberwatch</a></li>
+                        <li><a href="Pages/ToDoList/ToDo_Others.php" class="sidebar-link">Other</a></li>
                     </ul>
                 </li>
-                <li><a href="add_tasks.php" class="sidebar-link"><i class="fa fa-circle-o fa-fw"></i> ADD Tasks</a></li>
+                <li><a href="Pages/ToDoList/ToDo_Add.php" class="sidebar-link"><i class="fa fa-circle-o fa-fw"></i> ADD Tasks</a></li>
             </ul>
         </div>
     </div>

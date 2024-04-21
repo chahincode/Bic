@@ -34,8 +34,8 @@
         <a href="Pages/Magazin/Magazin.php"><li><i class="fa fa-circle-o fa-fw"></i> Magasin_IT</li></a>
         <a href="#" id="todo_tasks" onclick="toggleTasks(event)"><li><i class="fa fa-circle-o fa-fw"></i> ToDo Tasks</li></a>
            <ul id="sub_tasks" style="display: none;">
-              <li><a href="todo_taskspc.php">Cyberwatch</a></li>
-              <li><a href="todo_tasks.php">Other</a></li>
+              <li><a href="Pages/ToDoList/ToDo_CyberWatch.php">Cyberwatch</a></li>
+              <li><a href="Pages/ToDoList/todo_tasks.php">Other</a></li>
           </ul>
           <a href="add_tasks.php"><li><i class="fa fa-circle-o fa-fw"></i> ADD Tasks</li></a>
       </ul><
