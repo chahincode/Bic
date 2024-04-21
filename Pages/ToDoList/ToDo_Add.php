@@ -41,7 +41,6 @@ if (isset($_POST['saveProduct'])) {
         <div class="center">
             <button type="submit" name="saveProduct" class="btn btn-primary">Save</button>
             <button type="reset" class="btn btn-success">Reset</button>
-            <a href="add_tasks.php" class="btn btn-danger">Cancel</a>
         </div>
 
     </form>

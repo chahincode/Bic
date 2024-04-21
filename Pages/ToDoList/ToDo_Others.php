@@ -56,21 +56,6 @@
 
 
 <script type="text/javascript">
-  function addInBill(id,place)
-  { 
-    var value = $("#counter").val();
-    value ++;
-    var selection = 'selection'+place;
-    $("#bill").fadeIn();
-    $("#counter").val(value);
-    $("#"+selection).html("selected");
-    $.post('called.php?q=addtobill',
-               {
-                   id:id
-               }
-        );
-
-  }
   $(document).ready(function()
   {
     $(".rightAccount").click(function(){$(".account").fadeToggle();});
