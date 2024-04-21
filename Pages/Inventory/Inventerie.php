@@ -1,6 +1,4 @@
 <?php include "..\..\Utilities\Header.php";
-include '../../assets/bill.php';
-
 if (isset($_GET['catId'])) {
     $catId = $_GET['catId'];
     $array = $con->query("select * from categories where id='$catId'");
@@ -12,7 +10,6 @@ if (isset($_GET['catId'])) {
     $catName = "All Inventeries";
     $stockArray = $con->query("select * from alocatebd");
 }
-
 ?>
 
 <div class="content">

@@ -19,7 +19,7 @@ if (isset($_POST['safeIn'])) {
     <button class="btn btn-primary btn-sm pull-right" data-toggle="modal" data-target="#addIn"
             style="margin-left: 2px;"><i class="fa fa-plus fa-fw"> </i>Add New Category
     </button>
-    <a href="manageCat.php">
+    <a href="Pages/Categories/manageCat.php" class="sidebar-link">
         <button class="btn btn-primary btn-sm pull-right" data-toggle="modal" data-target="#addIn"><i
                     class="fa fa-gear  fa-fw"> </i> Manage Categories
         </button>
@@ -83,4 +83,4 @@ while ($row = $array->fetch_assoc()) {
     </div>
 </div>
 
-
+<script src="../Home/script.js"></script>
