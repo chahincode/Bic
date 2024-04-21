@@ -40,7 +40,7 @@
         <ul class="nostyle zero">
             <li><a href="Pages/Settings/WebSite_Settings.php" class="sidebar-link"><i class="fa fa-circle-o fa-fw"></i> Site Setting</a>
             </li>
-            <li><a href="profile.php" class="sidebar-link"><i class="fa fa-circle-o fa-fw"></i> Profile Setting</a></li>
+            <li><a href="Pages/Settings/Profile_Settings.php" class="sidebar-link"><i class="fa fa-circle-o fa-fw"></i> Profile Setting</a></li>
             <li><a href="accountSetting.php" class="sidebar-link"><i class="fa fa-circle-o fa-fw"></i> Account
                     Setting</a></li>
             <li><a href="logout.php"><i class="fa fa-circle-o fa-fw"></i> Sign Out</a></li>
