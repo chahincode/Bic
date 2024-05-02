@@ -17,11 +17,11 @@ if (isset($_POST['safeIn'])) {
 <div>
     <span style="font-size: 16pt;color: #333333">Categories </span>
     <button class="btn btn-primary btn-sm pull-right" data-toggle="modal" data-target="#addIn"
-            style="margin-left: 2px;"><i class="fa fa-plus fa-fw"> </i>Add New Category
+        style="margin-left: 2px;"><i class="fa fa-plus fa-fw"> </i>Add New Category
     </button>
     <a href="Pages/Categories/manageCat.php">
         <button class="btn btn-primary btn-sm pull-right" data-toggle="modal" data-target="#addIn"><i
-                    class="fa fa-gear  fa-fw"> </i> Manage Categories
+                class="fa fa-gear  fa-fw"> </i> Manage Categories
         </button>
     </a>
 </div>
@@ -35,14 +35,17 @@ while ($row = $array->fetch_assoc()) {
     <a href="Inventeriess.php?id=<?php echo $row['id'] ?>">
         <div class="box2 col-md-3">
             <div class="center"><img src="photo/<?php echo $row['pic'] ?>" style="width: 155px;height: 122px;"
-                                     class='img-thumbnail'></div>
+                    class='img-thumbnail'></div>
             <hr style="margin: 7px;">
             <span style="padding: 11px"><strong style="font-size: 10pt">Name</strong><span class="pull-right"
-                                                                                           style="color:blue;margin-right: 11px;"><?php echo $row['name'] ?></span></span>
+                    style="color:blue;margin-right: 11px;">
+                    <?php echo $row['name'] ?>
+                </span></span>
             <hr style="margin: 7px;">
-            <span style="padding: 11px"><strong style="font-size: 10pt">Quantity</strong><span
-                        class="pull-right"
-                        style="color:blue;margin-right: 11px"><?php echo $row2['count(*)']; ?></span></span>
+            <span style="padding: 11px"><strong style="font-size: 10pt">Quantity</strong><span class="pull-right"
+                    style="color:blue;margin-right: 11px">
+                    <?php echo $row2['count(*)']; ?>
+                </span></span>
         </div>
     </a>
     <?php
@@ -82,5 +85,3 @@ while ($row = $array->fetch_assoc()) {
 
     </div>
 </div>
-
-

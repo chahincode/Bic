@@ -1,0 +1,155 @@
+html,
+body {
+    height: 100%;
+}
+.inventories-page {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+
+.bloc-sidbar {
+    width: 20%;
+    position: relative;
+}
+
+.topBar-table {
+    width: 80%;
+}
+.bloc-sidbar {
+    height: 100vh;
+}
+/*** TOPBAR ***/
+.top-bar {
+    padding: 13px 0;
+    color: white;
+    background: #357CA5;
+}
+.rightAccount {
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 30px;
+    align-items: center;
+    gap: 16px;
+    font-size: 18px;
+}
+/**** TABLE ***/
+thead.table-light {
+    background: #f8f9fa;
+    box-shadow: 0 2px 6px 0 #e3e3e3;
+}
+.alocate button,
+button {
+    background-color: #78b82c !important;
+    color: white !important;
+    border: 1px solid #f8f9fa !important;
+    border-radius: 4px;
+    padding: 6px 10px;
+    box-shadow: 0 2px 4px #fafafa;
+}
+.delete button {
+    background-color: #e1231d !important;
+}
+.reception button {
+    background-color: #d32727 !important;
+}
+.detail button {
+    background-color: rgb(224, 171, 71) !important;
+}
+
+div#pageContent h2 {
+    padding: 20px !important;
+    font-size: 25px;
+    font-weight: 700;
+    margin: 0 !important;
+}
+.table-responsive {
+    padding: 0 20px;
+}
+.table > thead > tr > th {
+    vertical-align: middle !important;
+    font-size: 13px;
+    padding: 10px 12px;
+}
+.table > tbody > tr > td,
+.table>tbody>tr>th,
+.table>tfoot>tr>td,
+.table>tfoot>tr>th,
+.table>thead>tr>td,
+.table > thead > tr > th {
+    text-align: center;
+    padding: 16px 6px !important;
+}
+
+/*** SIDEBAR **/
+.bloc-logo {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+    padding: 3px 7px;
+    margin: 5px 2px;
+}
+.logo-name {
+    color: #dea20f;
+    font-size: 13pt;
+    font-weight: 500;
+}
+.top-dashboard {
+    background: #357CA5;
+    padding: 14px 3px;
+    color: white;
+    font-size: 15pt;
+    text-align: center;
+    text-shadow: 1px 1px 11px black;
+}
+.dashboard {
+    width: 100%;
+    height: 100%;
+    /* background: #222D32; */
+    background: #111e23;
+}
+.dashboard-name {
+    background: #1E282C;
+    color: white;
+    padding: 13px 17px;
+    border-left: 3px solid #357CA5;
+}
+.main-navigation {
+    color: #dea20f;
+    background: #1A2226;
+    font-size: 15px;
+    padding: 11px;
+}
+.item ul li {
+    background: #111e23 !important;
+    padding: 10px 10px 10px 22px !important;
+}
+.item ul li a {
+    color: #e3e3e3 !important;
+    transition: 0.3s;
+}
+.item ul li a:hover,
+.item ul li a:focus {
+    color: #c9930b !important;
+    text-decoration: none !important;
+}
+/*** MAGAZIN **/
+.ajouter {
+    display: block;
+    margin: 20px !important;
+    width: max-content;
+}
+.badge.badge-success {
+    background: green;
+}
+.table-magazin tr td:nth-last-of-type(1) {
+    min-width: max-content !important;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: nowrap;
+    gap: 8px;
+}
+td.comment {
+    max-width: 300px;
+}

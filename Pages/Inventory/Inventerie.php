@@ -12,31 +12,36 @@ if (isset($_GET['catId'])) {
 }
 ?>
 
-<div class="content">
-    <div class="tableBox">
-        <table id="dataTable" class="table table-bordered table-striped" style="z-index: -1">
-            <thead>
-            <th>#</th>
-            <th>Equipement</th>
-            <th>modele</th>
-            <th>SN</th>
-            <th>Date_reception</th>
-            <th>Statue_reception</th>
-            <th>Location</th>
-            <th>IP Adress</th>
-            <th>MAC Adress</th>
-            <th>Quantity</th>
-            <th>Commentaire</th>
-            <th>Date_mise_en_service</th>
-            <th></th>
-            <th></th>
-            <th></th>
-            </thead>
-            <tbody>
+<!-- <div class="content">
+    <div class="tableBox"> -->
+<h2>Inventorie&nbsp;:</h2>
+<div class="table-responsive">
+    <table class="table table-bordered">
+        <thead class="table-light">
+            <tr>
+                <th></th>
+                <th>Equipement</th>
+                <th>Modele</th>
+                <th>SN</th>
+                <th>Date de reception</th>
+                <th>Statue de reception</th>
+                <th>Location</th>
+                <th>IP Adress</th>
+                <th>MAC Adress</th>
+                <th>Quantité</th>
+                <th>Commentaire</th>
+                <th>Date de mise en service</th>
+                <th></th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
             <?php include "./Methods/ShowTable.php"; ?>
-            </tbody>
-        </table>
-    </div>
-</div>  <!-- ending tag for content -->
+        </tbody>
+    </table>
+</div>
+<!-- </div>
+</div>  -->
+<!-- ending tag for content -->
 
 <script src="Pages/Inventory/script.js"></script>
