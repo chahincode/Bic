@@ -32,7 +32,6 @@ if (isset($_GET['catId'])) {
                 <th>Commentaire</th>
                 <th>Date de mise en service</th>
                 <th></th>
-                <th></th>
             </tr>
         </thead>
         <tbody>
@@ -40,8 +39,5 @@ if (isset($_GET['catId'])) {
         </tbody>
     </table>
 </div>
-<!-- </div>
-</div>  -->
-<!-- ending tag for content -->
 
 <script src="Pages/Inventory/script.js"></script>

@@ -32,55 +32,51 @@ $stockArray = $con->query("select * from invotoriesmg");
                     $i = $i + 1;
                     $id = $row['id'];
                     ?>
-                <tr>
-                    <td>
-                        <?php echo $row['id']; ?>
-                    </td>
-                    <td>
-                        <?php echo $row['Equipement']; ?>
-                    </td>
-                    <td>
-                        <?php echo $row['modele']; ?>
-                    </td>
-                    <td>
-                        <?php echo $row['SN']; ?>
-                    </td>
-                    <td>
-                        <?php echo $row['Date_reception']; ?>
-                    </td>
-                    <td>
-                        <?php if ($row['Statue_reception'] == 0) {
+                    <tr>
+                        <td>
+                            <?php echo $row['id']; ?>
+                        </td>
+                        <td>
+                            <?php echo $row['Equipement']; ?>
+                        </td>
+                        <td>
+                            <?php echo $row['modele']; ?>
+                        </td>
+                        <td>
+                            <?php echo $row['SN']; ?>
+                        </td>
+                        <td>
+                            <?php echo $row['Date_reception']; ?>
+                        </td>
+                        <td>
+                            <?php if ($row['Statue_reception'] == 0) {
                                 echo "<span class=\"badge badge-success\"></span>";
                             } else {
                                 echo '<span class="badge badge-success">Success</span>';
                             } ?>
-                    </td>
-                    <td class="comment">
-                        <?php echo $row['commentaire']; ?>
-                    </td>
-                    <td>
-                        <?php echo $row['Qt']; ?>
-                    </td>
-                    <td>
-                        <a <?php if ($row['Statue_reception'] == 0) {
+                        </td>
+                        <td class="comment">
+                            <?php echo $row['commentaire']; ?>
+                        </td>
+                        <td>
+                            <?php echo $row['Qt']; ?>
+                        </td>
+                        <td>
+                            <a <?php if ($row['Statue_reception'] == 0) {
                                 echo 'href="Pages/Magazin/updateMG.php?id=' . $row['id'] . '"';
                             } else {
                                 echo 'href="javascript:void(0)"';
                             } ?> class="link-dark reception">
-                            <i class="fa-solid fa-pen-to-square fs-5 me-3"><button>Reception</button></i>
-                        </a>
+                                <i class="fa-solid fa-pen-to-square fs-5 me-3"><button>Reception</button></i>
+                            </a>
 
-                        <a href="Pages/Magazin/alocateMG.php?id=<?php echo $row["id"] ?>" class="link-dark alocate"><i
-                                class="fa-solid fa-pen-to-square fs-5 me-3">
-                                <button> Alocate</button>
-                            </i></a>
-                        <a href="Pages/Magazin/Details.php?id=<?php echo $row["id"] ?>" class="link-dark detail"><i
-                                class="fa-solid fa-pen-to-square fs-5 me-3">
-                                <button> Details</button>
-                            </i></a>
+                            <a href="Pages/Magazin/alocateMG.php?id=<?php echo $row["id"] ?>" class="link-dark alocate"><i
+                                    class="fa-solid fa-pen-to-square fs-5 me-3">
+                                    <button> Alocate</button>
+                                </i></a>
 
-                    </td>
-                    <?php
+                        </td>
+                        <?php
                 }
                 ?>
             </tbody>
