@@ -17,7 +17,7 @@ if (isset($_GET['notice'])) {
 
 
 <?php echo $notice ?>
-<div style="width: 55%;margin: auto;padding: 22px;" class="well well-sm center">
+<div style="width: 55%;margin: auto;padding: 22px;" class="well well-sm center todo">
 
     <h4>Profile Setting</h4>
     <hr>
@@ -29,7 +29,7 @@ if (isset($_GET['notice'])) {
         <div class="form-group">
             <label for="some" class="col-form-label">Number</label>
             <input type="text" name="number" value="<?php echo $user['number'] ?>" class="form-control" id="some"
-                   required>
+                required>
         </div>
         <div class="center">
             <button class="btn btn-primary btn-sm btn-block" name="saveSetting">Save Setting</button>

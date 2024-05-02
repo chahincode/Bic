@@ -12,7 +12,7 @@ if (isset($_POST['saveSetting'])) {
 ?>
 
 <?php echo $notice ?>
-<div style="width: 55%;margin: auto;padding: 22px;" class="well well-sm center">
+<div style="width: 55%;margin: auto;padding: 22px;" class="well well-sm center todo">
     <h4>Site Setting</h4>
     <hr>
     <form method="POST">
@@ -29,5 +29,3 @@ if (isset($_POST['saveSetting'])) {
         </div>
     </form>
 </div>
-
-

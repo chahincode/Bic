@@ -1,0 +1,22 @@
+.title-new-category {
+    width: 55%;
+    margin: auto;
+}
+.table > tbody > tr > td,
+.table>tbody>tr>th,
+.table>tfoot>tr>td,
+.table>tfoot>tr>th,
+.table>thead>tr>td,
+.table > thead > tr > th {
+    padding: 16px !important;
+    vertical-align: top;
+    border: 1px solid #ddd !important;
+}
+.manageCat .container {
+    max-width: 1200px;
+    padding-top: 80px;
+    width: 100%;
+}
+.td-delete {
+    text-align: center;
+}

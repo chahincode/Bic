@@ -46,76 +46,101 @@ $result = mysqli_query($con, $sql);
 $row = mysqli_fetch_assoc($result);
 ?>
 
-<div class="container d-flex justify-content-center">
-    <form action="" method="post" style="width:50vw; min-width:300px;">
-        <div class="row mb-3">
-            <div class="col">
-                <label class="form-label">Equipement:</label>
-                <input type="text" class="form-control" name="Equipement" value="<?php echo $row['Equipement'] ?>">
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        <?php echo siteTitle(); ?>
+    </title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="../../css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../../font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="../../css/customStyle.css">
+    <script src='js/jquery.js'></script>
+    <script src='js/bootstrap.min.js'></script>
+    <script src="js/datatables.net/js/jquery.dataTables.min.js"></script>
+    <script src="js/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
+</head>
+
+<body>
+
+
+    <div class="container">
+        <form class="well form-horizontal" action=" " method="post" id="contact-form">
+
+            <h2><b>Allocate :</b></h2>
+            <div class="row">
+
+                <div class="form-group col col-md-12">
+                    <label class="form-label">Equipement:</label>
+                    <input type="text" class="form-control" name="Equipement" value="<?php echo $row['Equipement'] ?>">
+                </div>
+
+                <div class="groupe col col-md-4">
+                    <label class="form-label">Modele:</label>
+                    <input type="text" class="form-control" name="modele" value="<?php echo $row['modele'] ?>">
+                </div>
+                <div class="groupe col col-md-4">
+                    <label class="form-label">SN:</label>
+                    <input type="text" class="form-control" name="SN" value="<?php echo $row['SN'] ?>">
+                </div>
+                <div class="groupe col col-md-4">
+                    <label class="form-label">Date de reception:</label>
+                    <input type="date" class="form-control" name="Date_reception"
+                        value="<?php echo $row['Date_reception'] ?>">
+                </div>
+
+                <div class="groupe col col-md-4">
+                    <label class="form-label">Quantité allouée</label>
+                    <input type="number" name="Quan2" id="Quan2" class="form-control"
+                        value="<?php echo $row['Quantity_served2'] ?>">
+                </div>
+
+                <div class="groupe col col-md-4">
+                    <label for="Quan3" class="form-label">Quantite a servie</label>
+                    <input type="number" name="Quan3" id="Quan3" class="form-control" required>
+                </div>
+
+
+                <div class="form-group col col-md-4">
+                    <label for="some" class="form-label">Location</label>
+                    <select class="form-control" required name="Location">
+                        <option selected disabled value="">Please Select Location</option>
+                        <option value="Scrap" id="Scrap">Scrap</option>
+                        <option value="IT_Magasin">IT Magasin</option>
+
+                    </select>
+                </div>
+
+                <div class="groupe col col-md-4">
+                    <label class="form-label">Adresse IP:</label>
+                    <input type="text" class="form-control" name="adresse_IP">
+                </div>
+
+                <div class="groupe col col-md-4">
+                    <label class="form-label">Adresse MAC:</label>
+                    <input type="text" class="form-control" name="adresse_MAC">
+                </div>
+                <div class="groupe col col-md-4">
+                    <label class="form-label">Date de mise en service:</label>
+                    <input type="date" class="form-control" name="Date_mise_en_service">
+                </div>
+
+                <div class="groupe col col-md-12">
+                    <label class="form-label">Commentaire:</label>
+                    <textarea type="text" class="form-control" name="commentaire"></textarea>
+                </div>
+
+                <div class="col col-md-12 boutons">
+                    <div class="label"></div>
+                    <button type="submit" class="btn btn-success" name="submit">Alocate</button>
+                    <button class="btn btn-danger"><a href="index.php">Cancel</a></button>
+                </div>
             </div>
+        </form>
+    </div>
+</body>
 
-            <div class="col">
-                <label class="form-label">modele:</label>
-                <input type="text" class="form-control" name="modele" value="<?php echo $row['modele'] ?>">
-            </div>
-        </div>
-
-        <div class="mb-3">
-            <label class="form-label">SN:</label>
-            <input type="text" class="form-control" name="SN" value="<?php echo $row['SN'] ?>">
-        </div>
-        <div class="mb-3">
-            <label class="form-label">Date_reception:</label>
-            <input type="date" class="form-control" name="Date_reception" value="<?php echo $row['Date_reception'] ?>">
-        </div>
-
-        <div class="mb-3">
-            <label class="form-label">quantite_in_alocatebd</label>
-            <input type="number" name="Quan2" id="Quan2" class="form-control"
-                   value="<?php echo $row['Quantity_served2'] ?>">
-        </div>
-
-        <div class="mb-3">
-            <label for="Quan3" class="form-label">Quantite_a_servie</label>
-            <input type="number" name="Quan3" id="Quan3" class="form-control" required>
-        </div>
-
-
-        <div class="form-group">
-            <label for="some" class="col-form-label">Location</label>
-            <select class="form-control" required name="Location">
-                <option selected disabled value="">Please Select Location</option>
-                <option value="Scrap" id="Scrap">Scrap</option>
-                <option value="IT_Magasin">IT_Magasin</option>
-
-            </select>
-        </div>
-
-        <div class="mb-3">
-            <label class="form-label">adresse_IP:</label>
-            <input type="text" class="form-control" name="adresse_IP">
-        </div>
-
-        <div class="mb-3">
-            <label class="form-label">adresse_MAC:</label>
-            <input type="text" class="form-control" name="adresse_MAC">
-        </div>
-
-        <div class="mb-3">
-            <label class="form-label">commentaire:</label>
-            <input type="text" class="form-control" name="commentaire">
-        </div>
-
-        <div class="mb-3">
-            <label class="form-label">Date_mise_en_service:</label>
-            <input type="date" class="form-control" name="Date_mise_en_service">
-        </div>
-
-        <div>
-            <button type="submit" class="btn btn-success" name="submit">Alocate</button>
-            <a href="index.php" class="btn btn-danger">Cancel</a>
-        </div>
-    </form>
-</div>
-</div>
-
+</html>

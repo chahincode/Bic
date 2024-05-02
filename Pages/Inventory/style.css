@@ -1,0 +1,72 @@
+/*** ALLOCATE ***/
+body {
+    background-color: #ECF0F5;
+}
+
+#contact-form {
+    max-width: max-content !important;
+    margin: 50px auto !important;
+    padding: 40px 50px !important;
+    background-color: white;
+    border: 0.5px solid gainsboro !important;
+    box-shadow: 0 2px 4px 0 #fafafa;
+    border-radius: 5px;
+    color: #111e23;
+    box-shadow: 4px 6px 19px 0 rgba(145, 141, 141, 0.75);
+}
+.boutons {
+    display: flex;
+    gap: 16px;
+    flex-wrap: nowrap;
+    justify-content: center;
+    margin: 15px auto 0;
+}
+.boutons button {
+    width: 20%;
+    color: white;
+}
+.boutons a {
+    color: white;
+}
+.boutons a:hover {
+    color: inherit;
+}
+
+form#contact-form h2 {
+    margin-top: 0;
+}
+.boutons .btn.focus,
+.boutons .btn:focus,
+.boutons .btn:hover {
+    border: none !important;
+    border-color: transparent !important;
+    outline: none !important;
+    outline-offset: none !important;
+}
+
+
+#contact-form label {
+    display: block !important;
+    font-size: 17px;
+    letter-spacing: 0.1px;
+    font-weight: 500;
+    margin: 10px 0;
+}
+
+form#contact-form input,
+form#contact-form select,
+form#contact-form textarea {
+    border-radius: 5px;
+    min-height: 40px;
+    padding-left: 10px;
+    background: #fafafa !important;
+}
+
+.form-horizontal .form-group {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+}
+form#contact-form .col {
+    /* background: #000; */
+    margin: 10px 0 !important;
+}
