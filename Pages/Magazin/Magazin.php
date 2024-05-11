@@ -1,85 +1,106 @@
 <?php include "..\..\Utilities\Header.php"; ?>
-
-<link rel="stylesheet" type="text/css" href="Pages/Magazin/style.css">
-<script src="Pages/Magazin/script.js"></script>
-
-<?php
-$catName = "All Inventeries";
-$stockArray = $con->query("select * from invotoriesmg");
-
-?>
-
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="Pages/Magazin/style.css">
+    <script src='js/jquery.js'></script>
+    <script src='js/bootstrap.min.js'></script>
+    <script src="js/datatables.net/js/jquery.dataTables.min.js"></script>
+    <script src="js/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
+    <script src="Pages/Magazin/script.js"></script>
+</head>
+<body>
 <div class="content">
-    <a href="Pages/Magazin/ADDitmMG.php" onClick="return popup(this, 'notes')" class="ajouter">
+    <a onclick="ShowAddMagazin()" class="ajouter">
         <button>Ajouter</button>
     </a>
     <div class="table-responsive table-magazin">
-        <table class="table table-bordered">
+        <table id="MagazinTable" class="table table-bordered">
             <thead class="table-light">
-                <th></th>
-                <th>Equipement</th>
-                <th>modele</th>
-                <th>SN</th>
-                <th>Date de reception</th>
-                <th>Statue de reception(JDE)</th>
-                <th>commentaire</th>
-                <th>Quantité</th>
-                <th></th>
+            <th></th>
+            <th>Equipement</th>
+            <th>modele</th>
+            <th>SN</th>
+            <th>Date de reception</th>
+            <th>Statue</th>
+            <th>Quantité</th>
+            <th>commentaire</th>
+            <th></th>
             </thead>
             <tbody>
-                <?php $i = 0;
-                while ($row = $stockArray->fetch_assoc()) {
-                    $i = $i + 1;
-                    $id = $row['id'];
-                    ?>
-                    <tr>
-                        <td>
-                            <?php echo $row['id']; ?>
-                        </td>
-                        <td>
-                            <?php echo $row['Equipement']; ?>
-                        </td>
-                        <td>
-                            <?php echo $row['modele']; ?>
-                        </td>
-                        <td>
-                            <?php echo $row['SN']; ?>
-                        </td>
-                        <td>
-                            <?php echo $row['Date_reception']; ?>
-                        </td>
-                        <td>
-                            <?php if ($row['Statue_reception'] == 0) {
-                                echo "<span class=\"badge badge-success\"></span>";
-                            } else {
-                                echo '<span class="badge badge-success">Success</span>';
-                            } ?>
-                        </td>
-                        <td class="comment">
-                            <?php echo $row['commentaire']; ?>
-                        </td>
-                        <td>
-                            <?php echo $row['Qt']; ?>
-                        </td>
-                        <td>
-                            <a <?php if ($row['Statue_reception'] == 0) {
-                                echo 'href="Pages/Magazin/updateMG.php?id=' . $row['id'] . '"';
-                            } else {
-                                echo 'href="javascript:void(0)"';
-                            } ?> class="link-dark reception">
-                                <i class="fa-solid fa-pen-to-square fs-5 me-3"><button>Reception</button></i>
-                            </a>
 
-                            <a href="Pages/Magazin/alocateMG.php?id=<?php echo $row["id"] ?>" class="link-dark alocate"><i
-                                    class="fa-solid fa-pen-to-square fs-5 me-3">
-                                    <button> Alocate</button>
-                                </i></a>
-
-                        </td>
-                        <?php
-                }
-                ?>
             </tbody>
         </table>
     </div>
 </div>
+
+
+<div class="modal fade" id="UpdateReceptionModal" tabindex="-1" role="dialog">
+    <div class="formClass">
+        <div>
+            <label for="some" class="col-form-label"> Statut de reception</label>
+            <input type="checkbox" id="Sta" name="Statue_reception" value="1">
+        </div>
+        <div class="center">
+            <div>
+                <button onclick="UpdateStatus()" class="btn btn-success" name="submit">Update</button>
+                <a onclick="HideUpdateStatus()" class="btn btn-danger">Cancel</a>
+            </div>
+        </div>
+    </div>
+</div>
+<div style="width: 55%;margin: auto;padding: 22px;" class="modal fade well center" id="AddMagazinModal" tabindex="-2"
+     role="dialog">
+    <h4>Ajouter Au Magasin</h4>
+    <hr>
+    <form id="MagazinForm" method="POST" action="API/Magazin/AddMagazin.php" enctype="multipart/form-data">
+        <div class="form-group">
+            <label for="some" class="col-form-label">Equipement :</label>
+            <input type="text" name="Equipement" class="form-control" id="Equipement" required>
+        </div>
+        <div class="form-group">
+            <label for="some" class="col-form-label">Model :</label>
+            <input type="text" name="Model" class="form-control" id="Model" required>
+        </div>
+        <div class="form-group">
+            <label for="some" class="col-form-label">S\N :</label>
+            <input type="text" name="SN" class="form-control" id="SN">
+        </div>
+
+        <div class="form-group">
+            <label for="some" class="col-form-label">Date de reception :</label>
+            <input type="date" name="date" class="form-control" id="date" required>
+        </div>
+
+        <div class="form-group">
+            <label for="some" class="col-form-label">Quantité :</label>
+            <input type="number" name="qt" class="form-control" id="qt" required>
+        </div>
+
+        <div class="form-group">
+            <label for="some" class="col-form-label">Picture :</label>
+            <input type="file" name="pic" class="form-control" id="pic" required>
+        </div>
+
+        <div class="form-group">
+            <label for="some" class="col-form-label">Reception :</label>
+            <input type="checkbox" id="State" name="State">
+        </div>
+
+        <div class="form-group">
+            <label for="some" class="col-form-label">Commentaire :</label>
+            <input type="text" name="Commentaire" class="form-control" id="Commentaire">
+        </div>
+
+
+        <div class="center">
+            <button type="submit" name="saveProduct" class="btn btn-primary">Save</button>
+            <button type="reset" class="btn btn-success">Reset</button>
+            <button onclick="HideAddMagazin()" class="btn btn-danger">Cancel</button>
+        </div>
+
+    </form>
+</div>
+</div>
+</body>
+</html>

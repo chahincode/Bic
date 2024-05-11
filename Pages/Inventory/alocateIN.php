@@ -75,27 +75,25 @@ $row = mysqli_fetch_assoc($result);
 
                 <div class="form-group col col-md-12">
                     <label class="form-label">Equipement:</label>
-                    <input type="text" class="form-control" name="Equipement" value="<?php echo $row['Equipement'] ?>">
+                    <input type="text" class="form-control" name="Equipement">
                 </div>
 
                 <div class="groupe col col-md-4">
                     <label class="form-label">Modele:</label>
-                    <input type="text" class="form-control" name="modele" value="<?php echo $row['modele'] ?>">
+                    <input type="text" class="form-control" name="modele">
                 </div>
                 <div class="groupe col col-md-4">
                     <label class="form-label">SN:</label>
-                    <input type="text" class="form-control" name="SN" value="<?php echo $row['SN'] ?>">
+                    <input type="text" class="form-control" name="SN">
                 </div>
                 <div class="groupe col col-md-4">
                     <label class="form-label">Date de reception:</label>
-                    <input type="date" class="form-control" name="Date_reception"
-                        value="<?php echo $row['Date_reception'] ?>">
+                    <input type="date" class="form-control" name="Date_reception">
                 </div>
 
                 <div class="groupe col col-md-4">
                     <label class="form-label">Quantité allouée</label>
-                    <input type="number" name="Quan2" id="Quan2" class="form-control"
-                        value="<?php echo $row['Quantity_served2'] ?>">
+                    <input type="number" name="Quan2" id="Quan2" class="form-control">
                 </div>
 
                 <div class="groupe col col-md-4">
@@ -116,12 +114,12 @@ $row = mysqli_fetch_assoc($result);
 
                 <div class="groupe col col-md-4">
                     <label class="form-label">Adresse IP:</label>
-                    <input type="text" class="form-control" name="adresse_IP">
+                    <input type="text" class="form-control" name="Adress_IP">
                 </div>
 
                 <div class="groupe col col-md-4">
                     <label class="form-label">Adresse MAC:</label>
-                    <input type="text" class="form-control" name="adresse_MAC">
+                    <input type="text" class="form-control" name="Mac_ADress">
                 </div>
                 <div class="groupe col col-md-4">
                     <label class="form-label">Date de mise en service:</label>
@@ -130,7 +128,7 @@ $row = mysqli_fetch_assoc($result);
 
                 <div class="groupe col col-md-12">
                     <label class="form-label">Commentaire:</label>
-                    <textarea type="text" class="form-control" name="commentaire"></textarea>
+                    <textarea type="text" class="form-control" name="Commentaire"></textarea>
                 </div>
 
                 <div class="col col-md-12 boutons">
