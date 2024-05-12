@@ -10,12 +10,18 @@
     <script src="Pages/Magazin/script.js"></script>
 </head>
 <body>
-<div class="content">
-    <a onclick="ShowAddMagazin()" class="ajouter">
-        <button>Ajouter</button>
+<div class="content container-table">
+    
+        <h2>Magazin</h2>
+        <div class="bloc-btn">
+    <a onclick="ShowAddMagazin()" class="btn btn-primary">
+       Ajouter
     </a>
+    </div>
+    </div>
+  
     <div class="table-responsive table-magazin">
-        <table id="MagazinTable" class="table table-bordered">
+        <table id="MagazinTable" class="table table-striped table-bordered">
             <thead class="table-light">
             <th></th>
             <th>Equipement</th>
@@ -24,7 +30,7 @@
             <th>Date de reception</th>
             <th>Statue</th>
             <th>Quantité</th>
-            <th>commentaire</th>
+            <!-- <th>commentaire</th> -->
             <th></th>
             </thead>
             <tbody>
@@ -43,7 +49,7 @@
         </div>
         <div class="center">
             <div>
-                <button onclick="UpdateStatus()" class="btn btn-success" name="submit">Update</button>
+                <button onclick="UpdateStatus()" class="btn btn-primary" name="submit">Update</button>
                 <a onclick="HideUpdateStatus()" class="btn btn-danger">Cancel</a>
             </div>
         </div>

@@ -1,29 +1,43 @@
+
 <div class="top-bar">
     <div class="rightAccount">
-        <div><img src="photo/<?php echo $user['pic'] ?>" style='width: 41px;height: 33px;' class='img-circle'></div>
-        <div>
-            <?php echo ucfirst($user['name']) ?>
-        </div>
+        <div><svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="20px" viewBox="0 0 24 24"
+                width="20px" fill="#111e23">
+                <g>
+                    <path d="M0,0h24v24H0V0z" fill="none" />
+                </g>
+                <g>
+                    <g>
+                        <circle cx="10" cy="8" r="4" />
+                        <path
+                            d="M10.67,13.02C10.45,13.01,10.23,13,10,13c-2.42,0-4.68,0.67-6.61,1.82C2.51,15.34,2,16.32,2,17.35V20h9.26 C10.47,18.87,10,17.49,10,16C10,14.93,10.25,13.93,10.67,13.02z" />
+                        <path
+                            d="M20.75,16c0-0.22-0.03-0.42-0.06-0.63l1.14-1.01l-1-1.73l-1.45,0.49c-0.32-0.27-0.68-0.48-1.08-0.63L18,11h-2l-0.3,1.49 c-0.4,0.15-0.76,0.36-1.08,0.63l-1.45-0.49l-1,1.73l1.14,1.01c-0.03,0.21-0.06,0.41-0.06,0.63s0.03,0.42,0.06,0.63l-1.14,1.01 l1,1.73l1.45-0.49c0.32,0.27,0.68,0.48,1.08,0.63L16,21h2l0.3-1.49c0.4-0.15,0.76-0.36,1.08-0.63l1.45,0.49l1-1.73l-1.14-1.01 C20.72,16.42,20.75,16.22,20.75,16z M17,18c-1.1,0-2-0.9-2-2s0.9-2,2-2s2,0.9,2,2S18.1,18,17,18z" />
+                    </g>
+                </g>
+            </svg></div>
+
     </div>
     <div class="clear"></div>
 </div>
 <div class="account" style="display: none;">
-    <div style="background: #3C8DBC;padding: 22px;" class="center">
-        <img src="photo/<?php echo $user['pic'] ?>" style='width: 100px;height: 100px; margin:auto;'
+    <div class="center img-account">
+        <img src="photo/<?php echo $user['pic'] ?>" style='width: 60px;height: 60px; margin:auto;'
             class='img-circle img-thumbnail'>
-        <br><br>
-        <span style="font-size: 13pt;color:#CEE6F0">
+        <span>
             <?php echo $user['name'] ?>
-        </span><br>
-        <span style="color: #CEE6F0;font-size: 10pt">Member Since:
-            <?php echo $user['date']; ?>
         </span>
+        <span>Member Since:</span>
+        <span">
+            <?php echo $user['date']; ?>
+            </span>
     </div>
-    <div style="padding: 11px;">
-        <a href="profile.php">
-            <button class="btn btn-default" style="border-radius:0">Profile</button>
+    <div class="boutons">
+        <a href="./Pages/Settings/Profile_Settings.php" target="_self">
+           Profile </a>
+           <hr>
             <a href="logout.php">
-                <button class="btn btn-default pull-right" style="border-radius: 0">Sign Out</button>
+            Sign Out
             </a>
     </div>
 </div>

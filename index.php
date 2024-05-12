@@ -16,8 +16,7 @@
     <script src="js/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
 </head>
 
-<body style="background: #ECF0F5;padding:0;margin:0">
-    <div class="inventories-page">
+<body style="padding:0;margin:0">
         <div class="bloc-sidbar">
             <?php include ('Components/SideBar.php'); ?>
         </div>
@@ -25,7 +24,6 @@
             <?php include ('Components/TopBar/TopBar.php'); ?>
             <div id="pageContent"></div>
         </div>
-    </div>
 </body>
 
 </html>

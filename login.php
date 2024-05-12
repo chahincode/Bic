@@ -14,52 +14,47 @@ if (isset($_POST['login'])) {
         header('location:index.php');
     } else {
         echo
-        "<script>
+            "<script>
      		\$(document).ready(function(){\$('#error').slideDown().html('Login Error! Try again.').delay(3000).fadeOut();});
      	</script>
      	";
     }
 }
 ?>
-    <!DOCTYPE html>
-    <html>
-    <head>
-        <title>Login</title>
-        <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-        <link rel="stylesheet" type="text/css" href="font-awesome/css/font-awesome.min.css">
-        <link rel="stylesheet" type="text/css" href="css/customStyle.css">
-        <script src='js/jquery.js'></script>
-        <script src='js/bootstrap.min.js'></script>
-        <link rel="stylesheet" type="text/css" href="Pages/Login/style.css">
-    </head>
-    <body>
-    <div class="login-box">
-        <div class="well well-sm center head-title">
-            <h3 class="center">Login</h3>
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="Pages/Login/style.css">
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+</head>
+
+
+<body>
+    <div class="main">
+        <div class="logo">
+            <h2>The Providers</h2>
         </div>
-
-        <div class="well well-sm login-container" >
-            <p class="login-box-msg">Sign in to start your session</p>
+        <div class="signin">
+            <h1>Welcome!</h1>
+            <p>Sign into your account</p>
             <form action="" method="post">
-                <div class="form-group has-feedback">
-                    <input type="email" name="email" class="form-control" placeholder="Email" required>
-                    <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
-                </div>
-                <div class="form-group has-feedback">
-                    <input type="password" name="password" class="form-control" placeholder="Password" required>
-                    <span class="glyphicon glyphicon-lock form-control-feedback"></span>
-                </div>
+                <label>Username</label>
+                <i class="far fa-user">
+                    <input type="email" name="email" class="form-control" style="background:#3b3e87; color:#fff"
+                        placeholder="Email" required></i>
+                <label>Password</label>
+                <i class="fas fa-unlock-alt">
+                    <input type="password" name="password" class="form-control" style="background:#3b3e87; color:#fff"
+                        placeholder="Password" required></i>
 
-                <button type="submit" name="login" class="btn btn-primary btn-block btn-flat">Sign In</button>
+                <button type="submit" name="login" class="btn btn-primary btn-block btn-flat">Login</button>
+
             </form>
         </div>
-        <br>
-        <div class="alert alert-danger alert-container" id="error"></div>
-        <div class="empty-div"></div>
-
-        <!-- /.login-box-body -->
     </div>
-    </body>
-    </html>
+</body>
 
-
+</html>

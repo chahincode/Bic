@@ -15,10 +15,11 @@ if (isset($_GET['notice'])) {
 ?>
 
 <?php echo $notice ?>
-<div style="width: 55%;margin: auto;padding: 22px;" class="well well-sm center todo">
+<h2>Login Setting</h2>
+<div class="todoList">
+<div class="well well-sm todo">
 
-    <h4>Login Setting</h4>
-    <hr>
+    <!-- <hr> -->
     <form method="POST">
         <div class="form-group">
             <label for="some" class="col-form-label">Email</label>
@@ -34,4 +35,5 @@ if (isset($_GET['notice'])) {
             <button class="btn btn-primary btn-sm btn-block" name="saveSetting">Save Setting</button>
         </div>
     </form>
+</div>
 </div>

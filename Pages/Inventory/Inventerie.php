@@ -11,52 +11,10 @@ if (isset($_GET['catId'])) {
     $stockArray = $con->query("select * from alocatebd");
 }
 ?>
-
-<?php
-$id = $_GET["id"];
-if (isset($_POST["submit"])) {
-    echo "Trying to save ";
-    $Equipement = $_POST['Equipement'];
-    $modele = $_POST['modele'];
-    $SN = $_POST['SN'];
-    $Date_reception = $_POST['Date_reception'];
-    $commentaire = $_POST['commentaire'];
-    $Quan2 = $_POST['Quan2'];
-    $Quan3 = $_POST['Quan3'];
-    $per = $Quan2 - $Quan3;
-    if ($Quan2 === $Quan3) {
-        $sql = "INSERT INTO `invotoriesmg`(`id`,`catId`, `Equipement`, `modele`, `SN`, `Date_reception`, `Statue_reception`, `commentaire`, `Qt`) VALUES (NULL,1,'$Equipement','$modele','$SN','$Date_reception',1,'$_POST[commentaire]','$_POST[Quan2]') ";
-        $result = mysqli_query($con, $sql);
-
-        $sql = "DELETE FROM `alocatebd` WHERE id = $id";
-        $result = mysqli_query($con, $sql);
-        if ($result) {
-            header("Location: index.php?msg=Data updated successfully");
-        } else {
-            echo "Failed: " . mysqli_error($con);
-        }
-    } elseif ($Quan2 > $Quan3) {
-
-        $sql = "INSERT INTO `invotoriesmg`(`id`,`catId`, `Equipement`, `modele`, `SN`, `Date_reception`, `Statue_reception`, `commentaire`, `Qt`) VALUES (NULL,1,'$Equipement','$modele','$SN','$Date_reception',1,'$_POST[commentaire]','$_POST[Quan3]') ";
-
-        $result = mysqli_query($con, $sql);
-        $sql = "UPDATE `alocatebd` SET `Quantity_served2`='$per' WHERE id = $id";
-        $result = mysqli_query($con, $sql);
-        if ($result) {
-            header("Location: index.php?msg=Data updated successfully");
-        } else {
-            echo "Failed: " . mysqli_error($con);
-        }
-    } elseif ($Quan2 < $Quan3) {
-        $message = "Quantite erueur";
-        echo "<script type='text/javascript'>alert('$message');</script>";
-    }
-}
-?>
-
+<div class="container-table">
 <h2>Inventorie&nbsp;:</h2>
 <div class="table-responsive">
-    <table class="table table-bordered">
+    <table class="table table-striped table-bordered">
         <thead class="table-light">
             <tr>
                 <th></th>
@@ -66,11 +24,11 @@ if (isset($_POST["submit"])) {
                 <th>Date de reception</th>
                 <th>Statue de reception</th>
                 <th>Location</th>
-                <th>IP Adress</th>
-                <th>MAC Adress</th>
+                <!-- <th>IP Adress</th>
+                <th>MAC Adress</th> -->
                 <th>Quantité</th>
                 <th>Commentaire</th>
-                <th>Date de mise en service</th>
+                <!-- <th>Date de mise en service</th> -->
                 <th></th>
             </tr>
         </thead>
@@ -102,25 +60,24 @@ if (isset($_POST["submit"])) {
                 <td>
                     <?php echo $row['Location']; ?>
                 </td>
-                <td>
-                    <?php echo $row['Adress_IP']; ?>
+                <!-- <td>
+                    <?php // echo $row['Adress_IP']; ?>
                 </td>
                 <td>
-                    <?php echo $row['Mac_ADress']; ?>
-                </td>
+                    <?php // echo $row['Mac_ADress']; ?>
+                </td> -->
                 <td>
                     <?php echo $row['Quantity_served2']; ?>
                 </td>
                 <td>
                     <?php echo $row['Commentaire']; ?>
                 </td>
+                <!-- <td>
+                    <?php //echo $row['Date_mise_en_service']; ?>
+                </td> -->
                 <td>
-                    <?php echo $row['Date_mise_en_service']; ?>
-                </td>
-                <td>
-                    <button onclick="ShowModal(<?php echo $row["id"] ?>)" class="link-dark alocate"><i
-                                class="fa-solid fa-pen-to-square fs-5 me-3"> Allocate
-                        </i></button>
+                    <button onclick="ShowModal(<?php echo $row["id"] ?>)" class="link-dark btn btn-primary"> Allocate
+                        </button>
                 </td>
             </tr>
             <?php
@@ -128,6 +85,7 @@ if (isset($_POST["submit"])) {
         ?>
         </tbody>
     </table>
+</div>
 </div>
 
 
@@ -195,9 +153,9 @@ if (isset($_POST["submit"])) {
                 <textarea type="text" class="form-control" name="Commentaire"></textarea>
             </div>
 
-            <div class="col col-md-12 boutons">
-                <div class="label"></div>
-                <button type="submit" class="btn btn-success" name="submit">Alocate</button>
+            <div class="col col-md-12 boutons-allocate">
+                <!-- <div class="label"></div> -->
+                <button type="submit" class="btn btn-primary" name="submit">Alocate</button>
                 <button class="btn btn-danger"><a href="index.php">Cancel</a></button>
             </div>
         </div>

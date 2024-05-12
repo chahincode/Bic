@@ -78,11 +78,12 @@ function LoadData() {
                         <td>${row.Date_reception}</td>
                         <td><span class="badge ${getStatusBadgeClass(row.Statue_reception)}">${getStatusString(row.Statue_reception)}</span></td>
                         <td>${row.Qt}</td>
-                        <td>${row.commentaire}</td>
-                        <td><button onclick="UpdateReception(${row.Statue_reception},${row.id})" lass="actionButton">Reception</button></td>
+                      
+                        <td><button onclick="UpdateReception(${row.Statue_reception},${row.id})" class="btn btn-primary actionButton">Reception</button></td>
                     `;
                 tableBody.appendChild(tr);
             });
+            // <td>  <textarea>${row.commentaire} </textarea></td>
         })
         .catch(error => console.error('Error fetching data:', error));
 }

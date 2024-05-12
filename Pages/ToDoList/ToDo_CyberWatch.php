@@ -29,14 +29,11 @@ $stockArray = $con->query("select * from alocatebd where Equipement='pc'");
                     <?php echo $row['name_user']; ?>
                 </td>
                 <td>
-                    <a href="Pages/ToDoList/ToDo_Delete.php?id=<?php echo $row["id"] ?>" class="link-dark"><i
-                            class="fa-solid fa-pen-to-square fs-5 me-3">
-                            <button>Delete</button>
-                        </i></a>
-                    <a href="Pages/ToDoList/ToDo_Update.php?id=<?php echo $row["id"] ?>" class="link-dark"><i
-                            class="fa-solid fa-pen-to-square fs-5 me-3">
-                            <button> update</button>
-                        </i></a>
+                    <a href="Pages/ToDoList/ToDo_Delete.php?id=<?php echo $row["id"] ?>" class="btn btn-red link-dark">
+ Delete
+                        </a>
+                    <a href="Pages/ToDoList/ToDo_Update.php?id=<?php echo $row["id"] ?>" class="btn btn-primary link-dark">update
+                        </a>
                     <?php /* </td>
 
               <?php //

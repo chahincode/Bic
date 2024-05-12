@@ -34,7 +34,7 @@ if (isset($_POST["submit"])) {
                                value="<?php echo $row['name_computer'] ?>">
                     </div>
                     <div>
-                        <button type="submit" class="btn btn-success" name="submit">delate</button>
+                        <button type="submit" class="btn btn-primary" name="submit">delate</button>
                         <a href="index.php" class="btn btn-danger">Cancel</a>
                 </center>
             </div>

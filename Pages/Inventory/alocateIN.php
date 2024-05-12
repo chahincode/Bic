@@ -71,12 +71,13 @@ $row = mysqli_fetch_assoc($result);
         <form class="well form-horizontal" action=" " method="post" id="contact-form">
 
             <h2><b>Allocate :</b></h2>
-            <div class="row">
+          
 
                 <div class="form-group col col-md-12">
                     <label class="form-label">Equipement:</label>
                     <input type="text" class="form-control" name="Equipement">
                 </div>
+                <div class="row">
 
                 <div class="groupe col col-md-4">
                     <label class="form-label">Modele:</label>
@@ -90,7 +91,8 @@ $row = mysqli_fetch_assoc($result);
                     <label class="form-label">Date de reception:</label>
                     <input type="date" class="form-control" name="Date_reception">
                 </div>
-
+              </div>
+              <div class="row">
                 <div class="groupe col col-md-4">
                     <label class="form-label">Quantité allouée</label>
                     <input type="number" name="Quan2" id="Quan2" class="form-control">
@@ -111,6 +113,8 @@ $row = mysqli_fetch_assoc($result);
 
                     </select>
                 </div>
+                </div>
+                <div class="row">
 
                 <div class="groupe col col-md-4">
                     <label class="form-label">Adresse IP:</label>
@@ -125,18 +129,19 @@ $row = mysqli_fetch_assoc($result);
                     <label class="form-label">Date de mise en service:</label>
                     <input type="date" class="form-control" name="Date_mise_en_service">
                 </div>
+                </div>
 
                 <div class="groupe col col-md-12">
                     <label class="form-label">Commentaire:</label>
                     <textarea type="text" class="form-control" name="Commentaire"></textarea>
                 </div>
 
-                <div class="col col-md-12 boutons">
+                <div class="col col-md-12 boutons-allocate">
                     <div class="label"></div>
                     <button type="submit" class="btn btn-success" name="submit">Alocate</button>
                     <button class="btn btn-danger"><a href="index.php">Cancel</a></button>
                 </div>
-            </div>
+           
         </form>
     </div>
 </body>

@@ -40,7 +40,7 @@ if (isset($_POST["submit"])) {
             </div>
 
             <div>
-                <button type="submit" class="btn btn-success" name="submit">update</button>
+                <button type="submit" class="btn btn-primary" name="submit">update</button>
                 <a href="Pages/ToDoList/ToDo_CyberWatch.php" class="btn btn-danger">Cancel</a>
             </div>
         </form>

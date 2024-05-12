@@ -58,8 +58,8 @@ if (isset($_POST['safeIn'])) {
                     </div>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                <button type="submit" class="btn btn-primary" name="safeIn">Save Inventory</button>
+                <button type="button" class="btn btn-red" data-dismiss="modal">Close</button>
+                <button type="submit" class="btn primary" name="safeIn">Save Inventory</button>
             </div>
             </form>
         </div>

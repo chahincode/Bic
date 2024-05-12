@@ -21,11 +21,3 @@
 .cancel {
     align-self: flex-end;
 }
-
-
-.formClass {
-    background-color: aqua !important;
-    top: 40%;
-    position: absolute;
-    left: 50%;
-}

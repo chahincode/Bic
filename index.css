@@ -1,7 +1,18 @@
+*, :after, :before {
+    box-sizing: border-box;
+}
+:root {
+    --primary-color: #c9930b;
+}
+
 html,
 body {
+    display: block;
     height: 100%;
-    background-color: #ECF0F5;
+    background-color: #fff !important;
+}
+a:focus, a:hover {
+    color: inherit !important;
 }
 .inventories-page {
     display: flex;
@@ -11,21 +22,28 @@ body {
 }
 
 .bloc-sidbar {
-    width: 20%;
-    position: relative;
+    display: block;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    max-width: 20% !important;
+    overflow-y: auto;
+    padding: 0;
+    box-shadow: none;
 }
 
 .topBar-table {
     width: 80%;
+    margin-left: 20%;
 }
 .bloc-sidbar {
     height: 100vh;
 }
 /*** TOPBAR ***/
 .top-bar {
-    padding: 13px 0;
-    color: white;
-    background: #357CA5;
+    padding: 5px 0;
+    background-color: #ECF0F5;
 }
 .rightAccount {
     display: flex;
@@ -38,6 +56,9 @@ body {
 /**** TABLE ***/
 thead.table-light {
     background: #f8f9fa;
+    box-shadow: 0 2px 6px 0 #e3e3e3;
+}
+tbody {
     box-shadow: 0 2px 6px 0 #e3e3e3;
 }
 .alocate button,
@@ -59,11 +80,29 @@ button {
     background-color: rgb(224, 171, 71) !important;
 }
 
-div#pageContent h2 {
-    padding: 20px !important;
-    font-size: 25px;
+div#pageContent h2, .bloc-titre-btn a {
+    position: relative;
+    width: max-content;
+    z-index: 2;
+    padding: 10px 20px !important;
+    font-size: 18px;
     font-weight: 700;
-    margin: 0 !important;
+    color: #fff;
+    border-radius: 12px;
+    margin: 30px 12px 30px;
+    background-color: #c9930b;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, .1), 0 2px 4px -1px rgba(0, 0, 0, .06);
+}
+
+.container-table h2 {
+    margin-top: -30px !important;
+}
+
+.bloc-titre-btn a {
+    cursor: pointer;
+}
+.bloc-titre-btn a:hover {
+    text-decoration: none !important;
 }
 .table-responsive {
     padding: 0 20px;
@@ -84,6 +123,7 @@ div#pageContent .tableBox {
 .table > thead > tr > th {
     text-align: center;
     padding: 16px 6px !important;
+    vertical-align: middle !important;
 }
 
 /*** SIDEBAR **/
@@ -91,12 +131,11 @@ div#pageContent .tableBox {
     display: flex;
     align-items: center;
     gap: 11px;
-    padding: 3px 7px;
-    margin: 5px 2px;
+    padding: 7px;
 }
 .logo-name {
-    color: #dea20f;
-    font-size: 13pt;
+    color: #ffffff;
+    font-size: 16pt;
     font-weight: 500;
 }
 .top-dashboard {
@@ -120,7 +159,7 @@ div#pageContent .tableBox {
     border-left: 3px solid #357CA5;
 }
 .main-navigation {
-    color: #dea20f;
+    color: #ffffff;
     background: #1A2226;
     font-size: 15px;
     padding: 11px;
@@ -131,12 +170,18 @@ div#pageContent .tableBox {
 }
 .item ul li a {
     color: #e3e3e3 !important;
+    padding: 12px 16px;
     transition: 0.3s;
+    border-radius: 12px;
 }
 .item ul li a:hover,
 .item ul li a:focus {
-    color: #c9930b !important;
+    background-color: #c9930b !important;
     text-decoration: none !important;
+    font-weight: 600;
+}
+.boutons a:hover {
+   color: #c9930b !important;
 }
 /*** MAGAZIN **/
 .ajouter {
@@ -187,11 +232,15 @@ div#dataTable_filter {
     display: block;
     width: 100% !important;
     object-fit: cover;
-    max-height: 150px;
+    max-height: 160px;
     padding: 0;
 }
 .row-category a {
     padding: 0 7px !important;
+}
+div#cardContainer {
+    display: flex;
+    gap: 20px;
 }
 .row-category .box2 {
     z-index: 1 !important;
@@ -200,13 +249,19 @@ div#dataTable_filter {
     margin: 0 !important;
     width: 100% !important;
     position: relative !important;
+    transition: .3s;
+}
+.row-category .box2:hover {
+        box-shadow: 10px 10px 40px -20px rgb(98, 98, 98) !important;
+        transform: translate(-5px, -5px) !important;
 }
 .bloc-content {
     padding: 10px;
 }
 .bloc-image {
-    min-height: 150px;
+    min-height: 160px;
 }
+
 .bloc-content .name {
     color: #000;
     font-weight: 500;
@@ -223,6 +278,8 @@ div#dataTable_filter {
 
 .todo {
     margin-top: 50px !important;
+    max-width: 85%;
+    margin: 0 auto;
 }
 
 button.close {
@@ -241,4 +298,177 @@ button.close {
 .table>thead>tr>td,
 .table > thead > tr > th {
     padding: 6px !important;
+}
+
+.dashboard a, .dashboard-name span, .other span {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.rightAccount:hover {
+    background-color: transparent !important;
+}
+
+.account {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    border-radius: 20px;
+    margin-top: 0px !important;
+    background: #f8f9fa;
+    box-shadow: 0 2px 6px 0 #e3e3e3;
+    color: #7b809a !important;
+    /* border: 1px solid #111e23; */
+    right: 20px !important;
+    width: auto !important;
+    z-index: 3 !important;
+}
+
+.account span {
+    display: block;
+    margin: 5px 0;
+    font-size: 14px;
+    font-weight: 400;
+    color: #7b809a !important;
+}
+
+.boutons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    gap: 10px;
+    position: relative;
+}
+.boutons a {
+    display: block;
+    color: #7b809a !important;
+    text-decoration: none;
+    font-weight: 700;
+}
+.boutons hr{
+    height: 1px;
+    width: calc(100% + 20px);
+    border-top: 1px solid #7b809a !important;
+    margin: 0 !important;
+}
+
+
+
+.container-table {
+    position: relative;
+    border-radius: 12px;
+    margin: 12px 20px;
+    z-index: 0;
+}
+.content.container-table {
+    margin-top: 50px;
+}
+.container-table::before {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background: #fff;
+    top: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px -1px rgba(0,0,0,.1),0 2px 4px -1px rgba(0,0,0,.06);
+
+}
+.table>:not(:last-child)>:last-child>* {
+    border-bottom-color: #f0f2f5 !important;
+}
+.table thead th {
+    padding: .75rem 1.5rem;
+    text-transform: capitalize;
+    letter-spacing: 0;
+    border-bottom: 1px solid #f0f2f5;
+    color: #7b809a !important;
+}
+.table>:not(caption)>*>* {
+    padding: .5rem;
+    background-color: transparent;
+    border-bottom-width: 1px;
+    box-shadow: inset 0 0 0 9999px transparent;
+}
+
+.btn-red, .btn-danger {
+    background-color: #dc3545 !important;
+    color: #fff !important;
+}
+.btn-danger a {
+    color: #fff !important;
+    text-decoration: none;
+}
+.btn.primary , .btn-primary{
+    background-color: var(--primary-color) !important;
+}
+.btn-primary:focus , .btn-primary:active {
+    border: 0 !important;
+}
+form#Allocation-form {
+    padding: 50px;
+}
+form#Allocation-form .form-group,form#Allocation-form .groupe {
+    margin: 10px 0 !important;
+}
+.boutons-allocate {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    justify-content: center;
+    margin-top: 15px;
+}
+.table > tbody > tr > td, .table>tbody>tr>th, .table>tfoot>tr>td, .table>tfoot>tr>th, .table>thead>tr>td, .table > thead > tr > th {
+    padding: 3px 6px !important;
+}
+.bloc-titre-btn {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+.formClass {
+    background-color: #fff !important;
+    top: 40%;
+    position: absolute;
+    left: 50%;
+    padding: 30px 50px;
+    border-radius: 12px !important;
+}
+.formClass label {
+    margin-bottom: 15px;
+}
+form#MagazinForm {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+h4 {
+    font-weight: 700 !important;
+}
+.well {
+    background-color: #fff !important;
+}
+
+.bloc-btn {
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 20px;
+}
+
+.table-responsive.table-magazin {
+    z-index: 1;
+    position: relative;
+}
+
+.btn {
+    border: 0 !important;
+}
+.btn.active.focus, .btn.active:focus, .btn.focus, .btn:active.focus, .btn:active:focus, .btn:focus {
+    outline: none !important;
 }

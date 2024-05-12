@@ -12,9 +12,11 @@ if (isset($_POST['saveSetting'])) {
 ?>
 
 <?php echo $notice ?>
-<div style="width: 55%;margin: auto;padding: 22px;" class="well well-sm center todo">
-    <h4>Site Setting</h4>
-    <hr>
+<h2>Site Setting</h2>
+<div class="todoList">
+<div class="well well-sm todo">
+ 
+    <!-- <hr> -->
     <form method="POST">
         <div class="form-group">
             <label for="some" class="col-form-label">Site Title</label>
@@ -28,4 +30,5 @@ if (isset($_POST['saveSetting'])) {
             <button class="btn btn-primary btn-sm btn-block" name="saveSetting">Save Setting</button>
         </div>
     </form>
+</div>
 </div>

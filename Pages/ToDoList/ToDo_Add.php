@@ -25,10 +25,10 @@ if (isset($_POST['saveProduct'])) {
 ?>
 
 <?php echo $notice ?>
-<div style="width: 55%;margin: auto;padding: 22px;" class="well well-sm center todo">
-
-    <h4>Crée une nouvelle Tache </h4>
-    <hr>
+<h2>Crée une nouvelle Tache </h2>
+<div class="todoList">
+<div class="well well-sm todo">
+    <!-- <hr> -->
     <form method="POST">
         <div class="form-group">
             <label for="some" class="col-form-label">tasks todo:</label>
@@ -39,10 +39,11 @@ if (isset($_POST['saveProduct'])) {
             <label for="comment">Enter your comment:</label><br>
             <textarea id="commentaire" style="width: 100%" name="commentaire" rows="4" cols="50"></textarea><br>
         </div>
-        <div class="center">
+        <div class="right">
             <button type="submit" name="saveProduct" class="btn btn-primary">Save</button>
-            <button type="reset" class="btn btn-success">Reset</button>
+            <button type="reset" class="btn btn-red">Reset</button>
         </div>
 
     </form>
+</div>
 </div>

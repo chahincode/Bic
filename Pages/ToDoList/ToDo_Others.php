@@ -30,10 +30,8 @@ $stockArray = $con->query("select * from alocatebd");
                     <?php echo $row['name_user']; ?>
                 </td>
                 <td>
-                    <a href="delatetodo.php?id=<?php echo $row["id"] ?>" class="link-dark"><i
-                            class="fa-solid fa-pen-to-square fs-5 me-3"><button>delate</button></i></a>
-                    <a href="updatetodo.php?id=<?php echo $row["id"] ?>" class="link-dark"><i
-                            class="fa-solid fa-pen-to-square fs-5 me-3"><button> update </button></i></a>
+                    <a href="delatetodo.php?id=<?php echo $row["id"] ?>" class="btn btn-red link-dark">delate</a>
+                    <a href="updatetodo.php?id=<?php echo $row["id"] ?>" class="btn btn-primary link-dark">update</a>
                 </td>
 
                 <?php /*
